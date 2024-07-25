@@ -21,22 +21,40 @@ body {
    }
 }
 
+
 .contaner {
    display: grid;
    grid-template-areas:
       "head head"
       "cont cont"
       " footer footer";
-   height: 100vh;
+   height: 95vh;
    position: relative;
+   padding-left: 45px;
+}
+@media(min-width:768px) {
+   .contaner {
+       width: 750px;
+   }
 }
 
+@media(min-width:992px) {
+   .contaner {
+       width: 970px;
+   }
+}
+
+@media(min-width:1200px) {
+   .contaner {
+       width: 1170px;
+   }
+}
 .logo {
    grid-area: head;
    width: fit-content;
    position: absolute;
-   bottom: -15%;
-   left: 3%;
+   bottom: -35px;
+   left: -5px;
 }
 
 
@@ -75,15 +93,15 @@ body {
 
 .contaner .content .mockups-image {
    position: relative;
-   width: 50%;
+   width: 780px;
+   height: 60vh;
 }
 
 .contaner .content .mockups-image img {
-   height: 108%;
-   width: 90%;
+   height: 500px;
+   width: 725px;
    position: absolute;
-   left: 10%;
-   top: 15%;
+   top: 110px;                           
 }
 
 @media(max-width:767px) {
@@ -112,27 +130,27 @@ body {
    display: flex;
    flex-direction: column;
    align-items: flex-end;
-   width: 50%;
+  width: 700px;
    text-align: left;
 }
 
 .contaner .about-huddle .headings {
    color: white;
    text-align: left;
-   width: 70%;
-   margin-right: 175px;
+   width: 565px;
+   margin-right: 150px;
 }
 
 
 .contaner .about-huddle .headings h2 {
    line-height: 1.2;
-   font-size: 48px;
-   width: 100%;
-   margin-top: 120px;
+   font-size: 45px;
+   width: 435px;
+   margin-top: 150px;
 }
 
 .contaner .about-huddle .headings h4 {
-   width: 90%;
+   width: 480px;
    font-size: 20px;
    font-weight: 100;
    margin-top: 30px;
@@ -148,7 +166,7 @@ body {
    cursor: pointer;
    text-decoration: none;
    position: absolute;
-   bottom: 10%;
+   bottom: 55px;
 
 }
 
@@ -204,20 +222,19 @@ body {
    grid-area: footer;
    text-align: end;
    position: absolute;
-   width: 95%;
-   height: auto;
-   top: 55%;
+   width: 225px;
+   right: 225px;
+   bottom: -19px;
 }
 
 .contaner .footer .icons span {
    display: inline-block;
-   width: 30px;
-   height: 30px;
+   width: 25px;
+   height: 25px;
    margin: -20px 5px 0 10px;
    border: 1.5px solid white;
    border-radius: 100%;
    padding: 3px;
-   background-size: contain;
    background-position: center;
 }
 
