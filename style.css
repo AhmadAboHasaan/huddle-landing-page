@@ -1,0 +1,285 @@
+:root {
+   --hoverColor: #e980e7;
+   --mainColor: #674bb1;
+}
+
+* {
+   box-sizing: border-box;
+   padding: 0%;
+   margin: 0%;
+}
+
+body {
+   background-color: var(--mainColor);
+   background-image: url(images/bg-desktop.svg);
+}
+
+@media(max-width:767px) {
+   body {
+      background-image: url(images/bg-mobile.svg);
+      background-size: contain;
+   }
+}
+
+.contaner {
+   display: grid;
+   grid-template-areas:
+      "head head"
+      "cont cont"
+      " footer footer";
+   height: 100vh;
+   position: relative;
+}
+
+.logo {
+   grid-area: head;
+   width: fit-content;
+   position: absolute;
+   bottom: -15%;
+   left: 3%;
+}
+
+
+.logo .icon img {
+   vertical-align: bottom;
+   width: 70px;
+}
+
+.logo h1 {
+   display: inline;
+   font-size: xxx-large;
+   color: white;
+}
+
+@media(max-width:767px) {
+   .contaner {
+      grid-template-areas:
+         "head"
+         "cont"
+         "footer";
+      height: 150vh;
+   }
+
+   .logo {
+      left: 10%;
+      top: 35%;
+      height: 25vh;
+   }
+}
+
+.contaner .content {
+   position: relative;
+   grid-area: cont;
+   display: flex;
+}
+
+.contaner .content .mockups-image {
+   position: relative;
+   width: 50%;
+}
+
+.contaner .content .mockups-image img {
+   height: 108%;
+   width: 90%;
+   position: absolute;
+   left: 10%;
+   top: 15%;
+}
+
+@media(max-width:767px) {
+   .contaner .content {
+      height: 100vh;
+      width: 100%;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+   }
+
+   .contaner .content .mockups-image {
+      height: 35vh;
+      width: 100%;
+   }
+
+   .contaner .content .mockups-image img {
+      top: 45%;
+      left: 10%;
+      width: 80%;
+      height: 185%;
+   }
+}
+
+.contaner .about-huddle {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-end;
+   width: 50%;
+   text-align: left;
+}
+
+.contaner .about-huddle .headings {
+   color: white;
+   text-align: left;
+   width: 70%;
+   margin-right: 175px;
+}
+
+
+.contaner .about-huddle .headings h2 {
+   line-height: 1.2;
+   font-size: 48px;
+   width: 100%;
+   margin-top: 120px;
+}
+
+.contaner .about-huddle .headings h4 {
+   width: 90%;
+   font-size: 20px;
+   font-weight: 100;
+   margin-top: 30px;
+}
+
+.about-huddle .btn {
+   font-weight: bold;
+   color: rgba(0, 0, 0, 0.774);
+   background: white;
+   padding: 20px 65px;
+   text-align: center;
+   border-radius: 30px;
+   cursor: pointer;
+   text-decoration: none;
+   position: absolute;
+   bottom: 10%;
+
+}
+
+.about-huddle .btn:hover {
+   background-color: var(--hoverColor);
+   color: white;
+}
+
+@media(max-width:767px) {
+   .contaner .about-huddle {
+      height: 65vh;
+      width: 100%;
+      align-items: center;
+      justify-content: flex-start;
+      text-align: center;
+      position: absolute;
+      top: 89%;
+      background-color: var(--mainColor);
+      z-index: 1;
+   }
+
+   .contaner .about-huddle .headings {
+      margin: 0;
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .contaner .about-huddle .headings h2 {
+      margin: 0;
+      width: 95%;
+      font-size: 55px;
+      text-align: center;
+   }
+
+   .contaner .about-huddle .headings h4 {
+      width: 85%;
+      font-size: 35px;
+      text-align: center;
+   }
+
+   .about-huddle .btn {
+      padding: 20px 140px;
+      font-size: 25px;
+      bottom: 0;
+      color: var(--mainColor);
+      font-weight: 300;
+   }
+}
+
+.contaner .footer {
+   grid-area: footer;
+   text-align: end;
+   position: absolute;
+   width: 95%;
+   height: auto;
+   top: 55%;
+}
+
+.contaner .footer .icons span {
+   display: inline-block;
+   width: 30px;
+   height: 30px;
+   margin: -20px 5px 0 10px;
+   border: 1.5px solid white;
+   border-radius: 100%;
+   padding: 3px;
+   background-size: contain;
+   background-position: center;
+}
+
+.contaner .footer .icons .facebook-icon {
+   background-image: url(images/icons/facebook-icon.=.jpg);
+}
+
+.contaner .footer .icons .tw-icon {
+   background-image: url(images/icons/tw-i.jpg);
+   background-size: 50%;
+   background-repeat: no-repeat;
+}
+
+.contaner .footer .icons .insta-icon {
+   background-image: url(images/icons/instagram-icon.png);
+}
+
+.contaner .footer .icons .facebook-icon,
+.contaner .footer .icons .insta-icon {
+   background-repeat: no-repeat;
+   background-size: 120%;
+}
+
+.contaner .footer .icons span:hover {
+   border-color: var(--hoverColor);
+   cursor: pointer;
+}
+
+.contaner .footer .icons .facebook-icon:hover {
+   background-image: url(images/‏‏icons-on-hover/facebook-icon.=.jpg);
+}
+
+.contaner .footer .icons .tw-icon:hover {
+   background-image: url(images/‏‏icons-on-hover/tw-i.jpg);
+}
+
+.contaner .footer .icons .insta-icon:hover {
+   background-image: url(images/‏‏icons-on-hover/instagram-icon.png);
+}
+
+@media(max-width:767px) {
+   .contaner .footer {
+      width: 100%;
+      height: 25vh;
+   }
+
+   .contaner .footer .icons {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding-top: 45%;
+      padding-bottom: 10%;
+      background-color: var(--mainColor);
+   }
+
+   .contaner .footer .icons span {
+      width: 50px;
+      height: 50px;
+      padding: 25px;
+      border: 2.5px solid white;
+   }
+}
